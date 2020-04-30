@@ -1,0 +1,30 @@
+@import './variable.scss';
+
+//BACKGROUND COLOR
+$theme-background-dark: $color-lkt;
+$theme-background-light: $color-bys;
+
+//FORGROUND COLOR
+$theme-font-color-dark: $color-lkt;
+$theme-font-color-light: $color-bys;
+
+//FRONT SIZE
+$title-large: $font-size-xdf;
+$title-medium: $font-size-vfg;
+$title-normal: $font-size-edt;
+$title-small: $font-size-nhj;
+
+$font-large: $font-size-xdf;
+$font-medium: $font-size-vfg;
+$font-normal: $font-size-edt;
+$font-small: $font-size-nhj;
+
+//BORDER
+$border-color: $color-nni;
+$border-color-active: $color-rhs;
+
+
+//BTN
+
+$button-background-color:$color-rhs;
+$button-font-color:$theme-font-color-dark;

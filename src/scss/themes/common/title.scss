@@ -1,0 +1,29 @@
+@import './app-variables.scss';
+
+.title {
+  &.uppper {
+    text-transform: uppercase;
+  }
+  &.bold {
+    font-weight: 800;
+  }
+}
+
+.title-l {
+  @extend .title;
+  font-size: $title-large;
+}
+
+.title-m {
+  @extend .title;
+  font-size: $title-medium;
+}
+
+.title-n {
+  @extend .title;
+  font-size: $title-normal;
+}
+.title-s {
+  @extend .title;
+  font-size: $title-small;
+}

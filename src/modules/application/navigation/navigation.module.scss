@@ -1,0 +1,56 @@
+// @import '../../scss/Theme.scss';
+
+// .naviWrp{
+//     background-color: $theme-background-darak;
+//     height: 100% ;
+//     width: $navi-width;
+//     display: flex;;
+//     color: $theme-foreground-light;
+// }
+
+.naviWrp {
+  position: absolute;
+  z-index: 100;
+  left: -80vw;
+
+  width: 80vw;
+  height: 100vh;
+  top: 0;
+
+  &.logged {
+    transition: left 1s ease-in-out;
+  }
+
+  &.show {
+    left: 0;
+  }
+
+  nav {
+    .naviHeader {
+      height: 60px;
+      border-bottom: 1px solid;
+      position: relative;
+      .userName {
+        font-size: 20px;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+    padding: 0 20px;
+    ul {
+      font-size: 24px;
+      list-style: none;
+      text-align: left;
+      padding: 20px 0;
+
+      li {
+        height: 40px;
+        line-height: 40px;
+
+        .Menuicon {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

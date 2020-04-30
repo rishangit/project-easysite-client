@@ -1,0 +1,64 @@
+@import './themes/common/app-variables.scss';
+@import './themes/common/title.scss';
+@import './themes/common/formatting.scss';
+@import './themes/common/button.scss';
+.title {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.theme-navi {
+  .theme-logoutWrp {
+    position: absolute;
+    bottom: 20px;
+  }
+}
+
+.list-group-item {
+  text-align: left;
+
+  .item {
+    margin: 0 5px;
+  }
+  .remove, .refresh {
+    float: right;
+    right: 15px;
+    position: absolute;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.item-v-c {
+  display: flex;
+  align-items: center;
+  &.f-row {
+    flex-direction: row;
+  }
+  &.f-col {
+    flex-direction: column;
+  }
+}
+
+.blink {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  opacity: 0.6;
+  transition: all 1s ease-in-out;
+  &.show {
+    display: block;
+  }
+}
+
+.valid-error,
+.valid-success {
+  input {
+    color: inherit;
+  }
+}

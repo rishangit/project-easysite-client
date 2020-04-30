@@ -1,0 +1,43 @@
+@import './app-variables.scss';
+
+.butn {
+  color: $theme-font-color-light;
+  background-image: linear-gradient(
+    to right,
+    $button-background-color 0%,
+    $button-background-color 70%,
+    $theme-background-dark 100%
+  );
+  cursor: pointer;
+
+  &.uppper {
+    text-transform: uppercase;
+  }
+  &.bold {
+    font-weight: 800;
+  }
+  
+  &:hover{
+    background-image: linear-gradient(
+      to right,
+      $theme-background-dark 0%,
+      $theme-background-dark 50%,
+      $button-background-color 100%
+    );
+  }
+}
+
+.butn-l {
+  @extend .butn;
+  font-size: $font-large;
+}
+
+.butn-m {
+  @extend .butn;
+  font-size: $font-medium;
+}
+
+.butn-s {
+  @extend .butn;
+  font-size: $font-small;
+}

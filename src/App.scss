@@ -1,0 +1,28 @@
+@import './scss/Theme.scss';
+@import './scss/icomoon/style.css';
+
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+  overflow: hidden;
+}
+
+.bodyWrp {
+  height: auto;
+  width:  100%;
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+}
+
+.bodyCon {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}
