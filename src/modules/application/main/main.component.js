@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom';
 import { Container, Row, Col } from 'reactstrap';
 import { appActionShowNavi } from '../app.action';
 import { connect } from 'react-redux';
@@ -12,7 +12,7 @@ import SubHeader from '../subHeader';
 
 //admin
 import AdminComponent from '../../admin';
-
+import AuthComponent from '../../auth';
 //client
 import ClientHomeComponent from '../../client/home';
 
@@ -28,13 +28,14 @@ const MainComponent = props => {
   };
 
   return (
-    <div className="App">
+    <div className={'App theme'}>
       <BrowserRouter>
         <div className="bodyWrp">
-          <div className="bodyCon">
+          <Switch>
+            <Route path="/admin/auth" component={AuthComponent}></Route>
             <Route path="/admin" component={AdminComponent}></Route>
             <Route exact path="/" component={ClientHomeComponent}></Route>
-          </div>
+          </Switch>
         </div>
         <div
           className={classNames(showNavi && 'show', 'blink')}

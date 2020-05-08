@@ -13,8 +13,6 @@ $font-kng: 30px;
 
 $space-lfg: 5px;
 
-
-
 $icon-color: $color-b5d;
 $icon-hover-color: $color-fgy;
 
@@ -49,85 +47,87 @@ $valid-error-color: $color-nqi;
 $valid-success-color: $color-pla;
 $valid-error-background-color: $color-qas;
 $valid-success-background-color: $color-hig;
+
+
 .theme {
-  &.dark {
-    color: $web-color;
+  color: $web-color;
 
-    .iconColor {
-      color: $icon-color;
+  .iconColor {
+    color: $icon-color;
+    &:hover {
+      color: $icon-hover-color;
+    }
+  }
+
+  .theme-header {
+    background-color: $header-background-color;
+    .theme-user {
+      color: $header-color;
+    }
+  }
+  .theme-navi {
+    // background-color: $navi-background-color;
+    border-color: $border-color;
+    border-right: 1px solid;
+    a {
+      color: $btn-color;
       &:hover {
-        color: $icon-hover-color;
+        color: $btn-hover-color;
+      }
+    }
+  }
+
+  .theme-element-wrp {
+    .theme-element-button {
+      background-color: $btn-background-color;
+      color: $btn-color;
+      &:hover {
+        background-color: $btn-background-hover-color;
+        color: $btn-hover-color;
       }
     }
 
-    .theme-header {
-      background-color: $header-background-color;
-      .theme-user {
-        color: $header-color;
-      }
+    .theme-element-text {
+      border-color: $btn-background-color;
     }
-    .theme-navi {
-      background-color: $navi-background-color;
-      a {
-        color: $btn-color;
-        &:hover {
-          color: $btn-hover-color;
-        }
-      }
+  }
+
+  .list-group-item {
+    &.inactive {
+      background-color: $div-background-disabled-color !important;
+      color: $div-disabled-color !important;
     }
-
-    .theme-element-wrp {
-      .theme-element-button {
-        background-color: $btn-background-color;
-        color: $btn-color;
-        &:hover {
-          background-color: $btn-background-hover-color;
-          color: $btn-hover-color;
-        }
-      }
-
-      .theme-element-text {
-        border-color: $btn-background-color;
-      }
+    &.selected {
+      background-color: $div-background-selected-color !important;
+      color: $div-selected-color !important;
+    }
+    &:nth-child(2n) {
+      background-color: $list-odd-background-color;
+      color: inherit;
     }
 
-    .list-group-item {
-      &.inactive {
-        background-color: $div-background-disabled-color !important;
-        color: $div-disabled-color !important;
-      }
-      &.selected {
-        background-color: $div-background-selected-color !important;
-        color: $div-selected-color !important;
-      }
-      &:nth-child(2n) {
-        background-color: $list-odd-background-color;
-        color: inherit;
-      }
-
-      .important {
-        font-size: $list-important;
-      }
-      .item {
-        margin: 0 $list-item-space;
-        &:first-child {
-          margin-left: 0;
-        }
+    .important {
+      font-size: $list-important;
+    }
+    .item {
+      margin: 0 $list-item-space;
+      &:first-child {
+        margin-left: 0;
       }
     }
+  }
 
-    .valid-error {
-      color: $valid-error-color;
-      input {
-        background-color: $valid-error-background-color;
-      }
+  .valid-error {
+    color: $valid-error-color;
+    input {
+      background-color: $valid-error-background-color;
     }
+  }
 
-    .valid-success {
-      color: $valid-success-color;
-      input {
-        background-color: $valid-success-background-color;
-      }
+  .valid-success {
+    color: $valid-success-color;
+    input {
+      background-color: $valid-success-background-color;
     }
   }
 }

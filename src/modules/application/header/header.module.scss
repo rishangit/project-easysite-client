@@ -1,18 +1,17 @@
 .headerWrp {
-    height: 60px;
-    width: auto;
-    display: flex;
-    align-items: center;
-    margin: 0 -15px;
-    .hamburgerCon{
-      position: absolute;
-      right: 20px;
-    }
+  height: 100vh;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  .hamburgerCon {
+    position: absolute;
+    right: 20px;
+  }
 
-    .loggedUser{
-      margin-left: 15px;
-      position: absolute;
-      bottom: 10px;
-      font-size: 20px;
-    }
+  .loggedUser {
+    margin-left: 15px;
+    position: absolute;
+    bottom: 10px;
+    font-size: 20px;
+  }
 }
