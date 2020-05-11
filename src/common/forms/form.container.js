@@ -1,5 +1,5 @@
-import React from "react";
-import { Formik } from "formik";
+import React from 'react';
+import { Formik } from 'formik';
 
 const FormContainer = props => {
   let { initModel, validation, onSubmit, onChange } = props;
@@ -7,9 +7,10 @@ const FormContainer = props => {
     onChange(initModel);
     if (props.onChange) props.onChange();
   };
-  
+
   return (
     <Formik
+      enableReinitialize={true}
       initialValues={initModel && initModel}
       validationSchema={validation && validation}
       onSubmit={(values, { setSubmitting }) => {
@@ -27,7 +28,7 @@ const FormContainer = props => {
               ...formikprops,
               onChange: () => {
                 elementOnnChange(props);
-              }
+              },
             });
           })}
         </form>

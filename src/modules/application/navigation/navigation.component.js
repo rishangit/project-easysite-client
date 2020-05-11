@@ -8,6 +8,9 @@ import { logOut } from '../../auth/auth.action';
 import { useHistory } from 'react-router-dom';
 import { Icon, listIconSize } from '../../../common/component/icon';
 
+
+import {NaviWebPagesComponent, AddWebPagesComponent} from '../../admin/webpages'
+
 const Navigation = props => {
   let {
     appActionShowNavi,
@@ -44,104 +47,13 @@ const Navigation = props => {
             )}
           </div>
           <ul>
-            <Link to="/admin/home" onClick={naviClicked}>
-              <li className={"item-v-c"}>
-              <Icon
-                  {...listIconSize}
-                  icon={'cross'}
-                  className={styles.Menuicon}
-                />
-                Home</li>
-            </Link>
-            <Link to="/watch" onClick={naviClicked}>
-              <li className={"item-v-c"}>
-              <Icon
-                  {...listIconSize}
-                  icon={'watch'}
-                  className={styles.Menuicon}
-                />
-                watch</li>
-            </Link>
-            <Link to="/bookNumber" onClick={naviClicked}>
-              <li className={"item-v-c"}>
-                <Icon
-                  {...listIconSize}
-                  icon={'book'}
-                  className={styles.Menuicon}
-                />
-                Book Number
-              </li>
-            </Link>
-            {loggedUser._id && (
-              <>
-                <Link to="/admin/clinic" onClick={naviClicked}>
-                  <li className={"item-v-c"}>
-                    <Icon
-                      {...listIconSize}
-                      icon={'clinic'}
-                      className={styles.Menuicon}
-                    />
-                    Clinic
-                  </li>
-                </Link>
-                <Link to="/admin/queue/list" onClick={naviClicked}>
-                  <li className={"item-v-c"}>
-                    <Icon
-                      {...listIconSize}
-                      icon={'queue'}
-                      className={styles.Menuicon}
-                    />
-                    Queue
-                  </li>
-                </Link>
-                <Link to="/admin/doctors/list" onClick={naviClicked}>
-                  <li className={"item-v-c"}>
-                    <Icon
-                      {...listIconSize}
-                      icon={'doctor'}
-                      className={styles.Menuicon}
-                    />
-                    Doctors
-                  </li>
-                </Link>
-                <Link to="/admin/room/list" onClick={naviClicked}>
-                  <li className={"item-v-c"}>
-                    <Icon
-                      {...listIconSize}
-                      icon={'door'}
-                      className={styles.Menuicon}
-                    />
-                    Rooms
-                  </li>
-                </Link>
-                <Link to="/admin/newUser" onClick={naviClicked}>
-                  <li className={"item-v-c"}>
-                  <Icon
-                      {...listIconSize}
-                      icon={'user'}
-                      className={styles.Menuicon}
-                    />
-                    Users</li>
-                </Link>
-                {loggedUser._id ? (
-                  <li className="theme-logoutWrp item-v-c" onClick={handleLogOut}>
-                             <Icon
-                      {...listIconSize}
-                      icon={'logout'}
-                      className={styles.Menuicon}
-                    />
-                    Logout
-                  </li>
-                ) : (
-                  <Link to="/admin/login">
-                    <li>Login</li>
-                  </Link>
-                )}
-              </>
-            )}
+            <li>
+            <NaviWebPagesComponent/>
+             
+            </li>
           </ul>
         </nav>
-                  <div className={styles.blink}></div>
+        <div className={styles.blink}></div>
       </div>
     </>
   );

@@ -70,7 +70,6 @@ $valid-success-background-color: $color-hig;
     border-color: $border-color;
     border-right: 1px solid;
     a {
-      color: $btn-color;
       &:hover {
         color: $btn-hover-color;
       }
@@ -128,6 +127,13 @@ $valid-success-background-color: $color-hig;
     color: $valid-success-color;
     input {
       background-color: $valid-success-background-color;
+    }
+  }
+
+  .icon-wrp{
+    font-size: 20px;
+    svg{
+      margin: 0 5px;
     }
   }
 }
